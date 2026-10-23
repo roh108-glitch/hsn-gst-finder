@@ -2,7 +2,7 @@ from backend.data_loader import get_data, new_response, to_item
 
 
 def lookup_digits(query: str, code: str) -> dict:
-    """Handles input that is only digits. No AI is used here."""
+    """Handles input that is only digits. No AI used."""
     data = get_data()
 
     if not 2 <= len(code) <= 8:

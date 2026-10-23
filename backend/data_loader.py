@@ -20,7 +20,7 @@ def _clean(text) -> str:
 
 
 def to_item(record: dict) -> dict:
-    """Turn an internal record into the small dict the API sends back."""
+    """Turn record into smaller dict that API sends back."""
     cgst = record["cgst"]
     sgst = record["sgst"]
     igst = record["igst"]
@@ -38,7 +38,7 @@ def to_item(record: dict) -> dict:
 
 
 def new_response(status: str, query: str, message: str = "") -> dict:
-    """Every search returns this same shape, so the frontend is simple."""
+    """Same shape returned by every search."""
     return {
         "status": status,
         "query": query,
